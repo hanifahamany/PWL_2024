@@ -3,6 +3,7 @@
 use App\Http\Controllers\PhotoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\PageController;
 
 
 /*
@@ -55,7 +56,8 @@ Route::get('/user/{name?}', function ($name='John') {
 Route::get('/hello', [WelcomeController::class,'hello']);
 
 Route::get('/hello', [WelcomeController::class, 'hello']);
-Route::get('/', [PagerController::class, 'index']);
-Route::get('/about', [PagerController::class, 'about']);
-Route::get('/articles/{id}', [PagerController::class, 'articles']);
+Route::get('/', [PageController::class, 'index']);
+Route::get('/about', [PageController::class, 'about']);
+Route::get('/articles/{id}', [PageController::class, 'articles']);
 Route::resource('photos', PhotoController::class);
+Route::resource('photos', PhotoController::class)->only(['index', 'show']);
