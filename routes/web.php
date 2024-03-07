@@ -29,7 +29,7 @@ Route::get('/about', function () {
     return 'Halo, namaku Hanifah Amany dengan NIM 2241720127';
 });
 
-Route::get('/user/Hanifah', function ($name) {
+Route::get('/user/{name}', function ($name) {
     return 'Nama saya '.$name;
     });
     
