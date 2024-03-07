@@ -17,9 +17,9 @@ Route::get('/', function () {
     return 'Halo1 Selamat datang';
 });
 
-Route::get('/hello', function () {
-    return 'Hello World';
-});
+// Route::get('/hello', function () {
+//     return 'Hello World';
+// });
 
 Route::get('/World', function () {
     return 'World';
@@ -49,3 +49,4 @@ Route::get('/user/{name?}', function ($name='John') {
     return 'Nama saya '.$name;
     });
     
+Route::get('/hello', [WelcomeController::class,'/hello']);
