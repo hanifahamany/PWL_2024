@@ -14,9 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Halo1 Selamat datang';
 });
 
-Route::get('/hai', function () {
-    return view('halo');
+Route::get('/hello', function () {
+    return 'Hello World';
+});
+
+Route::get('/World', function () {
+    return 'World';
+});
+
+Route::get('/about', function () {
+    return 'Halo, namaku Hanifah Amany dengan NIM 2241720127';
 });
