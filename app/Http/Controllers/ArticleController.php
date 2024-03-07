@@ -8,6 +8,6 @@ class ArticleController extends Controller
 {
     public function index()
     {
-        return 'Selamat Datang';
+        return 'Halaman Artikel dengn Id ' . $id;
     }
 }
