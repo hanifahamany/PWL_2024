@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\PhotoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\PhotoController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -56,3 +59,4 @@ Route::get('/hello', [WelcomeController::class, 'hello']);
 Route::get('/', [PagerController::class, 'index']);
 Route::get('/about', [PagerController::class, 'about']);
 Route::get('/articles/{id}', [PagerController::class, 'articles']);
+Route::resource('photos', PhotoController::class);
