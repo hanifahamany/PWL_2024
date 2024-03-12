@@ -50,7 +50,6 @@ Route::get('/user/{name?}', function ($name='John') {
 
 Route::get('/greeting', [WelcomeController::class, 'greeting']);
         
-Route::get('/hello', [WelcomeController::class,'hello']);
 Route::get('/hello', [WelcomeController::class, 'hello']);
 Route::get('/', [PageController::class, 'index']);
 Route::get('/about', [PageController::class, 'about']);
