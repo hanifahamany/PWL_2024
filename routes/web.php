@@ -54,7 +54,7 @@ Route::get('/user/{name?}', function ($name='John') {
     });
 
 Route::get('/greeting', function () {
-        return view('hello', ['name' => 'Hanifah']);
+        return view('blog.hello', ['name' => 'Hanifah']);
     });
         
     
