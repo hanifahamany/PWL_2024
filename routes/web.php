@@ -47,6 +47,7 @@ Route::get('/user/{name?}', function ($name='John') {
 // Route::get('/greeting', function () {
 //         return view('blog.hello', ['name' => 'Hanifah']);
 //     });
+
 Route::get('/greeting', [WelcomeController::class, 'greeting']);
         
 Route::get('/hello', [WelcomeController::class,'hello']);
