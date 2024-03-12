@@ -52,6 +52,11 @@ Route::get('/articles/{id}', function ($id) {
 Route::get('/user/{name?}', function ($name='John') {
     return 'Nama saya '.$name;
     });
+
+Route::get('/greeting', function () {
+        return view('hello', ['name' => 'Hanifah']);
+    });
+        
     
 Route::get('/hello', [WelcomeController::class,'hello']);
 
